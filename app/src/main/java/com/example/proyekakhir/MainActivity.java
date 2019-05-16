@@ -14,7 +14,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
 
 import com.example.proyekakhir.Adapter.ViewPagerAdapter;
 import com.example.proyekakhir.Common.Common;
@@ -81,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 }).check();
     }
 
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
 
     private void buildLocationCallBack() {
         locationCallback = new LocationCallback(){

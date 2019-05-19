@@ -1,5 +1,6 @@
 package com.example.proyekakhir.Retrofit;
 
+import com.example.proyekakhir.Model.WeatherForecastResult;
 import com.example.proyekakhir.Model.WeatherResult;
 
 import io.reactivex.Observable;
@@ -12,6 +13,12 @@ public interface OpenWeatherMap {
     Observable<WeatherResult> getWeatherByLatLng(@Query("lat")String lat,
                                                  @Query("lon")String lng,
                                                  @Query("appid") String appid,
-                                                 @Query("units") String units);
+                                                 @Query("units") String unit);
+
+    @GET("forecast")
+    Observable<WeatherForecastResult> getForecastWeatherByLatLng(@Query("lat")String lat,
+                                                                 @Query("lon")String lng,
+                                                                 @Query("appid") String appid,
+                                                                 @Query("units") String unit);
 
 }
